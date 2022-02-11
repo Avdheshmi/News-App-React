@@ -17,9 +17,9 @@ const App = () => {
       <Router>
         <Navbar heading="News by Awdhesh"  searchT={abd}/>
         <div className="box">
-        <div className="heading">
+        {/* <div className="heading">
           Awdhesh news
-        </div>
+        </div> */}
         <Routes>
           <Route path='/'element={<Home/>}/>
           <Route path='/About'element={<About/>}/>
