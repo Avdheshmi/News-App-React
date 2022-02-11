@@ -1,25 +1,36 @@
-import logo from './logo.svg';
+import React ,{useState} from 'react';
 import './App.css';
+import Navbar from './component/Navbar';
+import Home from './component/Home';
+import About from "./component/About"
+// import Card from './component/Card';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import SearchResults from './component/SearchResults';
 
-function App() {
+const App = () => {
+  const [searchvalue, setsearchvalue] = useState("");
+  const abd=(val)=>{
+    setsearchvalue(val)
+};
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+    <>
+      <Router>
+        <Navbar heading="News by Awdhesh"  searchT={abd}/>
+        <div className="box">
+        <div className="heading">
+          Awdhesh news
+        </div>
+        <Routes>
+          <Route path='/'element={<Home/>}/>
+          <Route path='/About'element={<About/>}/>
+          <Route path='/search'element={<SearchResults searchText={searchvalue}/>}/>
+        </Routes>
+        </div>
+      </Router>
+    </>
+  )
+
+};
+
 
 export default App;
