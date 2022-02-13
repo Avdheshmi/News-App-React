@@ -12,8 +12,7 @@
 }
 .tittle{
   text-align: center;
-  margin: 10px;
-
+ 
 }
 .container{
   display: grid;
@@ -24,6 +23,6 @@ grid-template-columns: repeat(3,1fr);
 
 }
 .box{
-  background-image: radial-gradient(rgba(177, 44, 44, 0.808),rgba(42, 42, 167, 0.787));
+  background-image: linear-gradient(rgba(177, 44, 44, 0.808),rgba(42, 42, 167, 0.787));
   
 }

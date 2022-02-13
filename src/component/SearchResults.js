@@ -24,7 +24,7 @@ const SearchResults = (props) => {
 
         }
         getData();
-    }, []);
+    }, [props.searchText]);
 
 
     if (!news) {
