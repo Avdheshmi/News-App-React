@@ -15,7 +15,7 @@ const App = () => {
   return (
     <>
       <Router>
-        <Navbar heading="News by Awdhesh Mishraa"  searchT={abd}/>
+        <Navbar heading="News by Awdhesh Mishra"  searchT={abd}/>
         <div className="box">
         {/* <div className="heading">
           Awdhesh news
